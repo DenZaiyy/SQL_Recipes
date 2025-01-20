@@ -11,10 +11,10 @@ Objective about this exercice, it's to know how to create database from zero, an
 I show you one example of request to add new ingredient in my database and use it in a recipe
 
 ```sql
-// Insert new ingredient with datas
+-- Insert new ingredient with datas
 INSERT INTO Ingredient (name, unit_measure, price) VALUES ('Coco', 'kg', 2);
 
-// Insert ingredient in recipe using associative table for table "Recipe" and "Ingredient"
+-- Insert ingredient in recipe using associative table for table "Recipe" and "Ingredient"
 INSERT INTO Ingredient_recipe (recipe_id, ingredient_id, quantity) VALUES (
     (SELECT id FROM recipe WHERE name = "Tasse d'eau chaude"),
     (SELECT id FROM ingredient WHERE name = "Coco"),
