@@ -12,10 +12,10 @@ I show you one example of request to add new ingredient in my database and use i
 
 ```sql
 -- Insert new ingredient with datas
-INSERT INTO Ingredient (name, unit_measure, price) VALUES ('Coco', 'kg', 2);
+INSERT INTO ingredient (name, unit_measure, price) VALUES ('Coco', 'kg', 2);
 
 -- Insert ingredient in recipe using associative table for table "Recipe" and "Ingredient"
-INSERT INTO Ingredient_recipe (recipe_id, ingredient_id, quantity) VALUES (
+INSERT INTO ingredient_recipe (recipe_id, ingredient_id, quantity) VALUES (
     (SELECT id FROM recipe WHERE name = "Tasse d'eau chaude"),
     (SELECT id FROM ingredient WHERE name = "Coco"),
     1
